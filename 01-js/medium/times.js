@@ -8,6 +8,20 @@ Hint - use Date class exposed in JS
 There is no automated test for this one, this is more for you to understand time goes up as computation goes up
 */
 
-function calculateTime(n) {
-    return 0.01;
+function calculateTime(n) 
+{
+    let sum = 0
+    let start = new Date().getTime();
+    for(let i=1;i<=n;i++)
+    {
+        sum += i;
+    }
+    let end = new Date().getTime();
+    return end - start;
 }
+
+
+console.log(calculateTime(100))
+console.log(calculateTime(1000))
+console.log(calculateTime(10000))
+
